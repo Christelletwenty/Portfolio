@@ -1,0 +1,14 @@
+<div class="container">
+
+    <form [formGroup]="profileForm" (ngSubmit)="handleSubmit()" action="">
+
+        <h1 class="contactme">Voud désirez en savoir plus ?</h1>
+        <label for="name">Votre nom : </label>
+        <input type="text" name="name" formControlName="name" required>
+        <br>
+        <label for="message">Votre message : </label>
+        <input id="message" name="message" formControlName="message" type="text" required>
+        <br>
+        <button type="submit" [disabled]="!profileForm.valid" value="Ajouter">Envoyer</button>
+    </form>
+</div>

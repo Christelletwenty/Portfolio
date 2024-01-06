@@ -1,0 +1,9 @@
+<mat-list>
+    @for (skill of skills$ | async; track skill.name){
+    <mat-list-item>
+        <mat-icon matListItemIcon [svgIcon]="skill.icon"></mat-icon>
+        <div matListItemTitle>{{skill.name}}</div>
+        <div matListItemLine>{{skill.level}}</div>
+    </mat-list-item>
+    }
+</mat-list>

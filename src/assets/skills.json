@@ -1,0 +1,31 @@
+[
+    {
+        "icon": "html5",
+        "name": "HTML5",
+        "level": "90%"
+    },
+    {
+        "name": "CSS3",
+        "level": "70%"
+    },
+    {
+        "name": "JavaScript",
+        "level": "60%"
+    },
+    {
+        "name": "PHP",
+        "level": "65%"
+    },
+    {
+        "name": "Wordpress",
+        "level": "85%"
+    },
+    {
+        "name": "JAVA",
+        "level": "45%"
+    },
+    {
+        "name": "Angular",
+        "level": "60%"
+    }
+]
