@@ -5,27 +5,58 @@
         "level": "90%"
     },
     {
+        "icon": "css3",
         "name": "CSS3",
         "level": "70%"
     },
     {
+        "icon": "js",
         "name": "JavaScript",
         "level": "60%"
     },
     {
+        "icon": "php",
         "name": "PHP",
+        "level": "55%"
+    },
+    {
+        "icon": "java",
+        "name": "JAVA",
+        "level": "60%"
+    },
+    {
+        "icon": "angular",
+        "name": "Angular",
         "level": "65%"
     },
     {
+        "icon": "wordpress",
         "name": "Wordpress",
         "level": "85%"
     },
     {
-        "name": "JAVA",
+        "icon": "docker",
+        "name": "Docker",
+        "level": "50%"
+    },
+    {
+        "icon": "jenkins",
+        "name": "Jenkins",
         "level": "45%"
     },
     {
-        "name": "Angular",
+        "icon": "database-solid",
+        "name": "PostgreSQL",
         "level": "60%"
+    },
+    {
+        "icon": "github",
+        "name": "Github",
+        "level": "75%"
+    },
+    {
+        "icon": "bitbucket",
+        "name": "Bitbucket",
+        "level": "70%"
     }
 ]

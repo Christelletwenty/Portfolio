@@ -25,5 +25,60 @@ export class SkillsComponent implements OnInit {
       `html5`,
       this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/html5.svg`)
     );
+
+    this.matIconRegistry.addSvgIcon(
+      `css3`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/css3.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `js`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/js.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `php`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/php.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `java`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/java.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `angular`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/angular.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `wordpress`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/wordpress.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `docker`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/docker.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `jenkins`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/jenkins.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `database-solid`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/database-solid.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `github`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/github.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `bitbucket`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/bitbucket.svg`)
+    );
   }
 }
