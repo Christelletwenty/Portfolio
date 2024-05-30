@@ -145,5 +145,12 @@
         "level": "70",
         "category": "DevOps",
         "icon": null
+    },
+    {
+        "id": 22,
+        "name": "Wordpress",
+        "level": "80",
+        "category": "CMS",
+        "icon": null
     }
 ]

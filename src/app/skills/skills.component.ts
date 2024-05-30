@@ -81,5 +81,50 @@ export class SkillsComponent implements OnInit {
       `bitbucket`,
       this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/bitbucket.svg`)
     );
+
+    this.matIconRegistry.addSvgIcon(
+      `git`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/git.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `jira`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/jira.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `postman`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/postman.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `grafana`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/grafana.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `prometheus`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/prometheus.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `elk`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/elk.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `spring`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/spring.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `mysql`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/mysql.svg`)
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      `postgresql`,
+      this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/postgresql.svg`)
+    );
   }
 }
