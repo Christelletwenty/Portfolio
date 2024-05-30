@@ -1,10 +1,10 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { SkillService } from './skill.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { DomSanitizer } from '@angular/platform-browser';
+import { SkillService } from '../../common/services/skill.service';
 
 @Component({
   selector: 'app-skills',
@@ -14,7 +14,8 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent implements OnInit {
-  skillService = inject(SkillService);
+
+  private skillService = inject(SkillService);
   skills$ = this.skillService.getSkills();
 
   matIconRegistry = inject(MatIconRegistry);

@@ -1,62 +1,149 @@
 [
     {
-        "icon": "html5",
-        "name": "HTML5",
-        "level": "90%"
+        "id": 1,
+        "name": "HTML",
+        "level": "80",
+        "category": "Front-end",
+        "icon": null
     },
     {
-        "icon": "css3",
-        "name": "CSS3",
-        "level": "70%"
+        "id": 2,
+        "name": "CSS",
+        "level": "55",
+        "category": "Front-end",
+        "icon": null
     },
     {
-        "icon": "js",
-        "name": "JavaScript",
-        "level": "60%"
+        "id": 3,
+        "name": "Javascript",
+        "level": "65",
+        "category": "Front-end",
+        "icon": null
     },
     {
-        "icon": "php",
-        "name": "PHP",
-        "level": "55%"
-    },
-    {
-        "icon": "java",
-        "name": "JAVA",
-        "level": "60%"
-    },
-    {
-        "icon": "angular",
+        "id": 4,
         "name": "Angular",
-        "level": "65%"
+        "level": "70",
+        "category": "Front-end",
+        "icon": null
     },
     {
-        "icon": "wordpress",
-        "name": "Wordpress",
-        "level": "85%"
-    },
-    {
-        "icon": "docker",
-        "name": "Docker",
-        "level": "50%"
-    },
-    {
-        "icon": "jenkins",
-        "name": "Jenkins",
-        "level": "45%"
-    },
-    {
-        "icon": "database-solid",
+        "id": 5,
         "name": "PostgreSQL",
-        "level": "60%"
+        "level": "65",
+        "category": "Back-end",
+        "icon": null
     },
     {
-        "icon": "github",
-        "name": "Github",
-        "level": "75%"
+        "id": 6,
+        "name": "MySQL",
+        "level": "65",
+        "category": "Back-end",
+        "icon": null
     },
     {
-        "icon": "bitbucket",
+        "id": 7,
+        "name": "PHP",
+        "level": "45",
+        "category": "Back-end",
+        "icon": null
+    },
+    {
+        "id": 8,
+        "name": "WebFlux",
+        "level": "55",
+        "category": "Back-end",
+        "icon": null
+    },
+    {
+        "id": 9,
+        "name": "R2DBC",
+        "level": "60",
+        "category": "Back-end",
+        "icon": null
+    },
+    {
+        "id": 10,
+        "name": "Spring",
+        "level": "65",
+        "category": "Back-end",
+        "icon": null
+    },
+    {
+        "id": 11,
+        "name": "Java",
+        "level": "70",
+        "category": "Back-end",
+        "icon": null
+    },
+    {
+        "id": 12,
+        "name": "GitHub",
+        "level": "80",
+        "category": "DevOps",
+        "icon": null
+    },
+    {
+        "id": 13,
+        "name": "Git",
+        "level": "75",
+        "category": "DevOps",
+        "icon": null
+    },
+    {
+        "id": 14,
         "name": "Bitbucket",
-        "level": "70%"
+        "level": "80",
+        "category": "DevOps",
+        "icon": null
+    },
+    {
+        "id": 15,
+        "name": "Postman",
+        "level": "75",
+        "category": "DevOps",
+        "icon": null
+    },
+    {
+        "id": 16,
+        "name": "Jenkins",
+        "level": "70",
+        "category": "DevOps",
+        "icon": null
+    },
+    {
+        "id": 17,
+        "name": "Docker",
+        "level": "75",
+        "category": "DevOps",
+        "icon": null
+    },
+    {
+        "id": 18,
+        "name": "Grafana",
+        "level": "60",
+        "category": "DevOps",
+        "icon": null
+    },
+    {
+        "id": 19,
+        "name": "Prometheus",
+        "level": "50",
+        "category": "DevOps",
+        "icon": null
+    },
+    {
+        "id": 20,
+        "name": "ELK",
+        "level": "50",
+        "category": "DevOps",
+        "icon": null
+    },
+    {
+        "id": 21,
+        "name": "Jira-Xray",
+        "level": "70",
+        "category": "DevOps",
+        "icon": null
     }
 ]

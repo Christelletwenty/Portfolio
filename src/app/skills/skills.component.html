@@ -1,10 +1,11 @@
 <h1>Mes compétences clés</h1>
 <mat-list>
-    @for (skill of skills$ | async; track skill.name){
+    @for (skill of skills$ | async; track skill.id){
     <mat-list-item>
         <mat-icon matListItemIcon [svgIcon]="skill.icon"></mat-icon>
         <div matListItemTitle>{{skill.name}}</div>
         <div matListItemLine>{{skill.level}}</div>
+        <div matListItemLine>{{skill.category}}</div>
     </mat-list-item>
     }
 </mat-list>
