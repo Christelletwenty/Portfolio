@@ -1,27 +1,30 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SkillService } from '../../common/services/skill.service';
+import { SkillCategory, Skills } from '../../common/models/skills';
+import { Observable, filter, groupBy, map, mergeMap, of, tap, toArray, zip } from 'rxjs';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, AsyncPipe, MatButtonModule, MatIconModule, MatListModule],
+  imports: [CommonModule, AsyncPipe, MatButtonModule, MatIconModule, MatListModule, MatChipsModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent implements OnInit {
 
   private skillService = inject(SkillService);
-  skills$ = this.skillService.getSkills();
+  public skills$ = this.skillService.getSkills();
 
-  matIconRegistry = inject(MatIconRegistry);
-  sanitizer = inject(DomSanitizer);
+  private matIconRegistry = inject(MatIconRegistry);
+  private sanitizer = inject(DomSanitizer);
 
-  ngOnInit() {
+  public ngOnInit(): void {
     this.matIconRegistry.addSvgIcon(
       `html5`,
       this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/html5.svg`)
@@ -126,5 +129,25 @@ export class SkillsComponent implements OnInit {
       `postgresql`,
       this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/postgresql.svg`)
     );
+  }
+
+  public getSkillsByCategory$(category: SkillCategory): Observable<Skills[]> {
+    return this.skills$
+      .pipe(
+        // Méthode pour agire sur le flux de l'observable
+        // mergeMap(skills => skills),
+        // filter(skill => skill.category === category),
+        // toArray()
+        // Méthode pour agir sur les données de l'obsrervable
+        map(skills => skills.filter(skill => skill.category === category))
+      );
+  }
+
+  public isHigherThan(level:number) {
+    if (level <= 60) {
+      return true;
+    }else{
+      return false;
+    }
   }
 }

@@ -1,11 +1,67 @@
-<h1>Mes compétences clés</h1>
-<mat-list>
-    @for (skill of skills$ | async; track skill.id){
-    <mat-list-item>
+<h2>Mes compétences .</h2>
+<div id="skills-cards">
+    <div class="card">
+        <div class="icon"></div>
+        <h3>Front-end</h3>
+        <ul>
+            <!-- Boucle pour récup les skills FRONT -->
+            @for (skill of getSkillsByCategory$('FRONT') | async; track skill.id) {
+            <li>
+                <mat-icon [svgIcon]="skill.icon"></mat-icon>
+                <span class="skill-name">{{skill.name}}</span>
+                <span class="skill-level" [class.highlighted]="isHigherThan(skill.level)">{{skill.level}}%</span>
+            </li>
+            }
+        </ul>
+    </div>
+    <div class="card">
+        <div class="icon"></div>
+        <h3>Back-end</h3>
+        <ul>
+            <!-- Boucle pour récup les skills BACK -->
+            @for (skill of getSkillsByCategory$('BACK') | async; track skill.id) {
+            <li>
+                <mat-icon [svgIcon]="skill.icon"></mat-icon>
+                <span class="skill-name">{{skill.name}}</span>
+                <span class="skill-level" [class.highlighted]="isHigherThan(skill.level)">{{skill.level}}%</span>
+            </li>
+            }
+        </ul>
+    </div>
+    <div class="card">
+        <div class="icon"></div>
+        <h3>DEVOPS</h3>
+        <ul>
+            <!-- Boucle pour récup les skills DEVOPS -->
+            @for (skill of getSkillsByCategory$('DEVOPS') | async; track skill.id) {
+            <li>
+                <mat-icon [svgIcon]="skill.icon"></mat-icon>
+                <span class="skill-name">{{skill.name}}</span>
+                <span class="skill-level" [class.highlighted]="isHigherThan(skill.level)">{{skill.level}}% </span>
+            </li>
+            }
+        </ul>
+    </div>
+    <div class="card">
+        <div class="icon"></div>
+        <h3>Others</h3>
+        <ul>
+            <!-- Boucle pour récup les skills OTHER -->
+            @for (skill of getSkillsByCategory$('OTHER') | async; track skill.id) {
+            <li>
+                <mat-icon [svgIcon]="skill.icon"></mat-icon>
+                <span class="skill-name">{{skill.name}}</span>
+                <span class="skill-level" [class.highlighted]="isHigherThan(skill.level)">{{skill.level}}%</span>
+            </li>
+            }
+        </ul>
+    </div>
+</div>
+<!-- @for (skill of skills$ | async; track skill.id){
+    <div class="list-skills">
         <mat-icon matListItemIcon [svgIcon]="skill.icon"></mat-icon>
         <div matListItemTitle>{{skill.name}}</div>
         <div matListItemLine>{{skill.level}}</div>
         <div matListItemLine>{{skill.category}}</div>
-    </mat-list-item>
-    }
-</mat-list>
+    </div>
+    } -->

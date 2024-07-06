@@ -1,26 +1,112 @@
-input[type=text],
-select,
-textarea {
+:host {
+    display: block;
+    width: 100%;
 
-    padding: 12px;
-    border: 1px solid;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
+    .ctc-me {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        text-align: center;
 
-input[type=submit] {
-    background-color: black;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+        .ctc {
+            width: 50%;
+            text-transform: uppercase;
+        }      
+    }
 
-.container {
-    border-radius: 5px;
-    padding: 20px;
+    form {
+
+        .contact {
+            display: flex;
+            flex-direction: row;
+            padding-top: 30px;
+            gap: 30px;
+            flex-wrap: wrap;
+            
+            .renseignement {
+                flex: 1 1 calc(50% - 30px);
+
+                input {
+                    height: 55px;
+                    &:first-child {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            .message {
+                flex: 1 1 calc(50% - 30px);
+                textarea {
+                    height: 100%;
+                }
+            }
+        }
+
+        input, textarea {
+            background-color: #333333;
+            border: 1px solid #ebebeb;
+            box-sizing: border-box;
+            color: #bcbcbc;
+            font-size: 16px;
+            outline: 0 none;
+            padding: 10px 25px;
+            resize: none;
+            box-shadow: none !important;
+            width: 100%;
+            border-radius: 0px;
+            font-family: 'Roboto Mono', monospace;
+            // min-width: 350px;
+
+            &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder {
+                color: #bcbcbc;
+                opacity: 1;
+            }
+        }
+
+    .button {
+        display: flex;
+        justify-content: center;
+
+            .btn {
+                align-items: center;
+                border-radius: 8px;
+                box-sizing: border-box;
+                border-color: #333333;
+                color: #36395A;
+                cursor: pointer;
+                display: inline-flex;
+                font-family: "Roboto Mono",monospace;
+                height: 48px;
+                padding-left: 16px;
+                padding-right: 16px;
+                margin-top: 30px;
+                position: relative;
+                text-align: left;
+                text-decoration: none;
+                transition: transform .15s;
+                touch-action: manipulation;
+                will-change: transform;
+                font-size: 15px;
+            }
+
+                .btn:hover {
+                    transform: translateY(-2px);
+                }
+            
+                .btn:active {
+                    transform: translateY(2px);
+                }
+            }
+        }   
+
+
+    @media screen and (max-width: 950px) {
+        form {
+            .contact {
+                .renseignement {
+                    flex: 1 1 100%;
+                }
+            }
+        }
+    }
 }

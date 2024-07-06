@@ -1,14 +1,25 @@
-<div class="container">
 
-    <form [formGroup]="profileForm" (ngSubmit)="handleSubmit()" action="">
-
-        <h1 class="contactme">Vous désirez en savoir plus ?</h1>
-        <label for="name">Votre nom : </label>
-        <input type="text" name="name" formControlName="name" required>
-        <br>
-        <label for="message">Votre message : </label>
-        <input id="message" name="message" formControlName="message" type="text" required>
-        <br>
-        <button type="submit" [disabled]="!profileForm.valid" value="Ajouter">Envoyer</button>
-    </form>
+<h2>Me contacter .</h2>
+<div class="ctc-me">
+<p class="ctc">Contactez-moi pour de plus amples informations ou une éventuelle rencontre .</p>
 </div>
+
+<form [formGroup]="profileForm" (ngSubmit)="handleSubmit()" action="">
+
+    <div class="contact">
+        <div class="renseignement">
+            <input type="text" name="name" formControlName="name" required placeholder="Votre nom">
+            <input type="email" name="email" formControlName="email" required placeholder="Votre email">
+        </div>
+
+        <div class="message">
+            <textarea name="message" formControlName="message" type="text" required placeholder="Votre message"></textarea>
+        </div>
+    </div>
+
+
+    <div class="button">
+        <button class="btn" type="submit" [disabled]="!profileForm.valid" value="Ajouter">Envoyer message</button>
+    </div>
+
+</form>

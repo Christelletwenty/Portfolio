@@ -13,12 +13,13 @@ import { FormsModule } from '@angular/forms';
 export class FormularComponent {
   profileForm = new FormGroup({
     name: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required),
   });
 
   handleSubmit() {
     alert(
-      this.profileForm.value.name + ' | ' + this.profileForm.value.message
+      this.profileForm.value.name + ' | ' + this.profileForm.value.message +' | ' + this.profileForm.value.email
     );
   }
 }

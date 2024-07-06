@@ -1,41 +1,379 @@
-@use '@angular/material' as mat;
-@use 'sass:map';
+// @use '@angular/material' as mat;
+// @use 'sass:map';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat.core();
+// @include mat.core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$AngularAppTutorial-primary: mat.define-palette(mat.$indigo-palette);
-$AngularAppTutorial-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// $AngularAppTutorial-primary: mat.define-palette(mat.$indigo-palette);
+// $AngularAppTutorial-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$AngularAppTutorial-warn: mat.define-palette(mat.$red-palette);
+// $AngularAppTutorial-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$AngularAppTutorial-theme: mat.define-light-theme((color: (primary: $AngularAppTutorial-primary,
-        accent: $AngularAppTutorial-accent,
-        warn: $AngularAppTutorial-warn,
-      )));
+// $AngularAppTutorial-theme: mat.define-light-theme((color: (primary: $AngularAppTutorial-primary,
+//         accent: $AngularAppTutorial-accent,
+//         warn: $AngularAppTutorial-warn,
+//       )));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($AngularAppTutorial-theme);
+// @include mat.all-component-themes($AngularAppTutorial-theme);
 
 /* You can add global styles to this file, and also import other style files */
+/* Extra small devices (phones, 600px and down) */
+  body {
+    color:#999999;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.80857;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: 25px;
+    font-weight: normal;
+    color: #333333;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .background {
+    background-image: url("assets/background2.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  
+    &:after {
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      background-color: #000;
+      opacity: 0.6;
+      z-index: 0;
+    }
+  }
+  
+  a {
+    color: white;
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -ms-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+  }
 
-html,
-body {
-  height: 100%;
-}
+  .mobile-menu {
+    display: none;
+    max-height: 0;
+    color: #666;
+    transition: all 200ms linear;
+    margin: 0;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    z-index: -1;
+    list-style-type: none;
 
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+    &.scrolled {
+      background-color: #333333;
+    }
+    &.active {
+      max-height: 50vh;
+      z-index: 1000;
+      padding: 15px 30px;
+    }
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: white;
+    z-index: 10;
+    transition: background-color 400ms ease;
+  
+    &.scrolled {
+      background-color: #333333;
+    }
+
+    .burger {
+      display: none;
+    }
+  
+    ul {
+      margin: 0;
+      li {
+        list-style: none;
+        display: inline-block;
+        padding: 0 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 15px;
+  
+        a {
+          position: relative;
+  
+          &:before, &:after {
+            transition: all .5s;
+          }
+  
+          &.active {
+            &:before {
+              content: ''; // un pseudo element ne s'affiche pas sans content
+              position: absolute;
+              bottom: -10px;
+              width: 70%;
+              left: 15%;
+              // background: white;
+              height: 3px;
+            }
+          }
+  
+          &:hover {
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+  
+  .me {
+    font-size: 24px;
+    color: white;
+  }
+  
+  section {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    
+    article {
+      display: flex;
+      max-width: 1140px;
+      padding: 30px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .status {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    flex-direction: column;
+  
+    h1 {
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      font-weight: normal;
+      line-height: 120% !important;
+      margin: 0;
+      font-size: 48px;
+    }
+  
+    .quote {
+      margin: 0;
+      color: rgba(255, 255, 255, .56);
+    }
+  }
+  
+  .infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    article {
+      flex-wrap: wrap-reverse;
+    }
+  
+    .about {
+      // width: 50%;
+      // height: 100%;
+      flex: 1 1 50%;
+  
+      p {
+        font-size: 15px;
+        text-align: justify;
+        padding-right: 15px;
+      }
+  
+      .cv {
+        align-items: center;
+        background-color: #FCFCFD;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #36395A;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: "Roboto Mono",monospace;
+        height: 48px;
+        justify-content: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-align: left;
+        text-decoration: none;
+        transition: transform .15s;
+        touch-action: manipulation;
+        will-change: transform;
+        font-size: 15px;
+      }
+  
+      .cv:hover {
+        transform: translateY(-2px);
+      }
+  
+      .cv:active {
+        transform: translateY(2px);
+      }
+    }
+  
+    .picture {
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+      flex: 0 0 auto;
+      min-width: 350px;
+      // width: 50%;
+    }
+  
+    .chris {
+      max-width: 350px;
+      box-shadow: 20px 20px 10px 12px black;
+      object-fit: cover;
+    }
+  }
+  
+  .now {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      article {
+        gap: 30px;
+      }
+  
+      .work {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          align-self: flex-start;
+        }
+      }
+  
+      .undraw {
+        max-width: 350px;
+      }
+  
+      .atm {
+        // width: 50%;
+        // height: 100%;
+        flex: 1 1 50%;
+  
+        p {
+          font-size: 15px;
+          text-align: justify;
+          padding-right: 15px;
+          margin-top: 80px;
+        }
+      }
+  }
+  
+  .skills {
+    background-color: #f2f3f5;
+    margin-top: 20px;
+  
+    article {
+      width: 100%;
+    }
+  }
+  
+  .section-form {
+      background-color: #999999;
+  
+      article {
+        width: 100%;
+        background-color: #FFFFFF;
+      }
+  }
+  
+  .section-footer {
+    background-color: #1f1f1f;
+    color: #666;
+  
+    footer {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      flex-wrap: wrap;
+  
+      pre {
+        span {
+          color: rgba(255, 255, 255, .56);
+        }
+  
+        a {
+          color: white;
+          text-decoration: underline !important;
+        }
+      }
+    }
+  
+      article {
+        width: 100%;
+      }
+  
+      a {
+        color: #333333;
+      }
+  }
+
+
+
+
+@media screen and (max-width: 950px) {
+  nav.navbar ul {
+    display: none;
+  }
+
+  .burger, .mobile-menu {
+    display: block !important;
+  }
+  
 }

@@ -1,12 +1,98 @@
-<header class="brand-name">
-    <img class="brand-logo" src="/assets/christelle_giga_bento.jpg" alt="logo">
-</header>
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <span class="me">Christelle GIGA BENTO</span>
+  <ul>
+    <li><a [routerLinkActiveOptions]="routerOptions" routerLinkActive="active" routerLink="/" fragment="aboutme">About me</a></li>
+    <li><a [routerLinkActiveOptions]="routerOptions" routerLinkActive="active" routerLink="/" fragment="atm">At the moment</a></li>
+    <li><a [routerLinkActiveOptions]="routerOptions" routerLinkActive="active" routerLink="/" fragment="skills">Skills</a></li>
+    <li><a [routerLinkActiveOptions]="routerOptions" routerLinkActive="active" routerLink="/" fragment="contact">Contact</a></li>
+    <li><a href="assets/cv_christelle_giga_bento.pdf" download="cv_christelle_giga_bento.pdf" >Curriculum Vitae</a></li>
+  </ul>
 
-<h1 class="name">Christelle GIGA BENTO</h1>
-<h2 class="status">Junior Web Developer & Automatisation Test Coordinator</h2>
-<p>Au cours de ma vie professionnelle, j'ai pu occuper de nombreux postes, tous plus enrichissants les uns que les
-    autres. Parcours atypique, j'ai dans un premier temps conclu avec succès mes études en socio-éducatif. Suite à quoi,
-    je me suis engagée au sein de l'armée suisse dans laquelle j'ai gradé sergent. Par la suite, j'ai principalement
-    baigné dans le monde de la vente et de la sécurité en tant qu'agent de sécurité auxiliaire, poste qui m'a ensuite
-    permit de me réorienter professionnellement, et d'achever avec réussite mes études de Webmaster ainsi qu'une
-    formation de technicien informatique.</p>
+  <button mat-icon-button class="burger" (click)="mobileMenuActive = !mobileMenuActive">
+    <mat-icon>menu</mat-icon>
+  </button>
+</nav>
+
+<ul class="mobile-menu" [class.active]="mobileMenuActive" [class.scrolled]="isScrolled">
+  <li><a [routerLinkActiveOptions]="routerOptions" routerLinkActive="active" routerLink="/" fragment="aboutme">About me</a></li>
+  <li><a [routerLinkActiveOptions]="routerOptions" routerLinkActive="active" routerLink="/" fragment="atm">At the moment</a></li>
+  <li><a [routerLinkActiveOptions]="routerOptions" routerLinkActive="active" routerLink="/" fragment="skills">Skills</a></li>
+  <li><a [routerLinkActiveOptions]="routerOptions" routerLinkActive="active" routerLink="/" fragment="contact">Contact</a></li>
+  <li><a href="assets/cv_christelle_giga_bento.pdf" download="cv_christelle_giga_bento.pdf" >Curriculum Vitae</a></li>
+</ul>
+
+<section class="background">
+  <div class="status">
+    <h1>Hello, I'm christelle</h1>
+    <p class="quote">
+      Junior Automatisation Test Coordinator & Junior Web Developer
+    </p>
+  </div>
+</section>
+
+<section class="infos" id="aboutme">
+  <article>
+    <div class="about">
+      <h2>About me .</h2>
+      <p>
+        Au cours de ma vie professionnelle, j'ai pu occuper de nombreux postes,
+        tous plus enrichissants les uns que les autres. Parcours atypique, j'ai
+        dans un premier temps conclu avec succès mes études en socio-éducatif.
+        Suite à quoi, je me suis engagée au sein de l'armée, suisse dans la troupe informatique, dans laquelle
+        j'ai gradé sergent. Par la suite, j'ai principalement baigné dans le
+        monde de la vente et de la sécurité en tant qu'agent de sécurité
+        auxiliaire, poste qui m'a ensuite permit de me réorienter
+        professionnellement, et d'achever avec réussite mes études de Webmaster
+        ainsi qu'une formation de technicien informatique.
+      </p>
+      <button><a class="cv" href="assets/cv_christelle_giga_bento.pdf" download="cv_christelle_giga_bento.pdf" >Télécharger CV</a></button>
+    </div>
+    <div class="picture">
+      <img class="chris" src="assets/chris2.png" />
+    </div>
+  </article>
+</section>
+
+<section class="now" id="atm">
+  <article>
+    <div class="work">
+      <h2>At the moment .</h2>
+      <img class="undraw" src="assets/working.svg">
+    </div>
+    <div class="atm">
+      <p>
+        J'occupe le poste de <em>Junior Automatisation test coordinator</em> au
+        sein des Hôpitaux universitaires de Genève depuis Novembre 2023. Un
+        poste qui m'apprend continuellement et dans lequel je manipule
+        énormément d'outils divers qui m'apportent des connaissances tant dans
+        le côté OPS que le côté DEV. Effectuer les tests des outils via XRay,
+        créer des clients dans Keycloak ou encore développer une application bac
+        à sable (Front et Back) pour pouvoir effectuer mes tests, développer des
+        features pour les applications existantes, ont fait et font parti de mes
+        tâches quotidiennes.
+      </p>
+    </div>
+  </article>
+</section>
+
+<section class="skills" id="skills">
+    <article>
+        <app-skills></app-skills>
+    </article>
+</section>
+
+<section id="contact" class="section-form">
+    <article>
+        <app-formular></app-formular>
+    </article>
+</section>
+
+<section class="section-footer">
+  <article>
+    <footer [innerHTML]="template"></footer>
+  </article>
+</section>
+
+@if (isScrolled) {
+  <app-scroll-top></app-scroll-top>
+}
