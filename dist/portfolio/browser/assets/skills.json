@@ -1,0 +1,156 @@
+[
+    {
+        "id": 1,
+        "name": "HTML",
+        "level": "80",
+        "category": "FRONT",
+        "icon": "html5"
+    },
+    {
+        "id": 2,
+        "name": "CSS",
+        "level": "55",
+        "category": "FRONT",
+        "icon": "css3"
+    },
+    {
+        "id": 3,
+        "name": "Javascript",
+        "level": "65",
+        "category": "FRONT",
+        "icon": "js"
+    },
+    {
+        "id": 4,
+        "name": "Angular",
+        "level": "70",
+        "category": "FRONT",
+        "icon": "angular"
+    },
+    {
+        "id": 5,
+        "name": "PostgreSQL",
+        "level": "65",
+        "category": "BACK",
+        "icon": "postgresql"
+    },
+    {
+        "id": 6,
+        "name": "MySQL",
+        "level": "65",
+        "category": "BACK",
+        "icon": "mysql"
+    },
+    {
+        "id": 7,
+        "name": "PHP",
+        "level": "45",
+        "category": "BACK",
+        "icon": "php"
+    },
+    {
+        "id": 8,
+        "name": "WebFlux",
+        "level": "55",
+        "category": "BACK",
+        "icon": "database-solid"
+    },
+    {
+        "id": 9,
+        "name": "R2DBC",
+        "level": "60",
+        "category": "BACK",
+        "icon": "database-solid"
+    },
+    {
+        "id": 10,
+        "name": "Spring",
+        "level": "65",
+        "category": "BACK",
+        "icon": "spring"
+    },
+    {
+        "id": 11,
+        "name": "Java",
+        "level": "70",
+        "category": "BACK",
+        "icon": "java"
+    },
+    {
+        "id": 12,
+        "name": "GitHub",
+        "level": "80",
+        "category": "DEVOPS",
+        "icon": "github"
+    },
+    {
+        "id": 13,
+        "name": "Git",
+        "level": "75",
+        "category": "DEVOPS",
+        "icon": "git"
+    },
+    {
+        "id": 14,
+        "name": "Bitbucket",
+        "level": "80",
+        "category": "DEVOPS",
+        "icon": "bitbucket"
+    },
+    {
+        "id": 15,
+        "name": "Postman",
+        "level": "75",
+        "category": "DEVOPS",
+        "icon": "postman"
+    },
+    {
+        "id": 16,
+        "name": "Jenkins",
+        "level": "70",
+        "category": "DEVOPS",
+        "icon": "jenkins"
+    },
+    {
+        "id": 17,
+        "name": "Docker",
+        "level": "75",
+        "category": "DEVOPS",
+        "icon": "docker"
+    },
+    {
+        "id": 18,
+        "name": "Grafana",
+        "level": "60",
+        "category": "DEVOPS",
+        "icon": "grafana"
+    },
+    {
+        "id": 19,
+        "name": "Prometheus",
+        "level": "50",
+        "category": "DEVOPS",
+        "icon": "prometheus"
+    },
+    {
+        "id": 20,
+        "name": "ELK",
+        "level": "50",
+        "category": "DEVOPS",
+        "icon": "elk"
+    },
+    {
+        "id": 21,
+        "name": "Jira-Xray",
+        "level": "70",
+        "category": "DEVOPS",
+        "icon": "jira"
+    },
+    {
+        "id": 22,
+        "name": "Wordpress",
+        "level": "80",
+        "category": "OTHER",
+        "icon": "wordpress"
+    }
+]
