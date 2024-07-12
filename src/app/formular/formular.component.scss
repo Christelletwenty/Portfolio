@@ -73,7 +73,6 @@
                 box-sizing: border-box;
                 border-color: #333333;
                 color: #36395A;
-                cursor: pointer;
                 display: inline-flex;
                 font-family: "Roboto Mono",monospace;
                 height: 48px;
@@ -87,17 +86,44 @@
                 touch-action: manipulation;
                 will-change: transform;
                 font-size: 15px;
-            }
-
-                .btn:hover {
+                &:disabled, &[disabled] {
+                    background-color: grey;
+                    color: darkgray;
+                }
+                &:not(:disabled):hover {
                     transform: translateY(-2px);
+                    cursor: pointer;
                 }
             
-                .btn:active {
+                &:not(:disabled):active {
                     transform: translateY(2px);
                 }
             }
-        }   
+
+            .loader {
+                margin-left: 15px;
+                width: 24px;
+                height: 24px;
+                border: 4px solid;
+                border-color: #666 #666 #666 transparent;
+                border-radius: 50%;
+                transform: rotate(0deg);
+                animation: spin 1s linear infinite;
+            }
+              
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+
+        }
+    }   
 
 
     @media screen and (max-width: 950px) {

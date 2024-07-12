@@ -4,22 +4,27 @@
 <p class="ctc">Contactez-moi pour de plus amples informations ou une éventuelle rencontre .</p>
 </div>
 
-<form [formGroup]="profileForm" (ngSubmit)="handleSubmit()" action="">
+<form [formGroup]="form" action="javascript:void(0);" (submit)="send()">
 
     <div class="contact">
         <div class="renseignement">
-            <input type="text" name="name" formControlName="name" required placeholder="Votre nom">
-            <input type="email" name="email" formControlName="email" required placeholder="Votre email">
+            <input type="text" name="name" formControlName="from_name" placeholder="Votre nom">
+            <input type="email" name="email" formControlName="from_email" placeholder="Votre email">
         </div>
 
         <div class="message">
-            <textarea name="message" formControlName="message" type="text" required placeholder="Votre message"></textarea>
+            <textarea name="message" formControlName="message" type="text" placeholder="Votre message"></textarea>
         </div>
     </div>
 
 
     <div class="button">
-        <button class="btn" type="submit" [disabled]="!profileForm.valid" value="Ajouter">Envoyer message</button>
+        <button class="btn" type="submit" value="Ajouter" [disabled]="form.invalid || form.pristine || emailIsSending">
+            Envoyer message
+            @if (emailIsSending) {
+                <div class="loader"></div>
+            }
+        </button>
     </div>
 
 </form>
